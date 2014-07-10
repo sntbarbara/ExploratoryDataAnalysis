@@ -6,7 +6,7 @@ emissions <- NEIdt[,list(emm=sum(Emissions)), by=list(year)]
 
 #Plotting
 png("plot1.png")
-plot(emissions$emm, type="l", ylab="Total PM2.5 Emissions", xlab="years", x=emissions$year)
+barplot(emissions$emm, type="l", ylab="Total PM2.5 Emissions", xlab="years", x=emissions$year)
 dev.off()
 
 
